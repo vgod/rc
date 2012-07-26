@@ -13,7 +13,7 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
         ;;
     esac
     if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
-        s+="⚡"
+        s+="☼"
     fi
     s+=")"
  
