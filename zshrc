@@ -5,7 +5,7 @@ ZSH=$HOME/.rc/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blinks"
+ZSH_THEME="blinks-venv"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -32,7 +32,7 @@ ZSH_THEME="blinks"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx python screen ssh-agent autojump coffee git-flow git-remote-branch vi-mode)
+plugins=(git osx python screen ssh-agent autojump coffee git-flow git-remote-branch vi-mode virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,3 +55,7 @@ export SAVEHIST=10000
 export HISTFILE=~/.zhistory
 # # append command to history file once executed
 setopt INC_APPEND_HISTORY
+
+# virtualenv and virtualenvwrapper
+export VIRTUAL_ENV_DISABLE_PROMPT='1'
+export WORKON_HOME=~/Envs
