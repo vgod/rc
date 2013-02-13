@@ -1,15 +1,18 @@
-#!/bin/sh
+#!/bin/bash
 RC_HOME=`pwd`
 cd ..
 for TARGET in zshrc screenrc;
 do
    if [ -e ".$TARGET" ]; then
       mv ".$TARGET" ".$TARGET.old"
+      echo
    fi
    ln -s "$RC_HOME/$TARGET" ".$TARGET"
 done
-if [[ "$SHELL" != "*/zsh" ]]
+if [[ "$SHELL" =~ .*/zsh ]]
 then
-   echo "Please change your shell to /bin/zsh."
+   echo "Good. You are using $SHELL. No need to chsh." 
+else
+   echo "Please change your shell to `which zsh`"
    chsh
 fi
