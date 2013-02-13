@@ -8,4 +8,8 @@ do
    fi
    ln -s "$RC_HOME/$TARGET" ".$TARGET"
 done
-
+if [[ "$SHELL" != "*/zsh" ]]
+then
+   echo "Please change your shell to /bin/zsh."
+   chsh
+fi
