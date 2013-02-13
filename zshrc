@@ -59,3 +59,8 @@ setopt INC_APPEND_HISTORY
 # virtualenv and virtualenvwrapper
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
 export WORKON_HOME=~/Envs
+
+# alias
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
