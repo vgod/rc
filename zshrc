@@ -54,7 +54,7 @@ export SAVEHIST=10000
 # # location of history
 export HISTFILE=~/.zhistory
 # # append command to history file once executed
-setopt INC_APPEND_HISTORY
+setopt APPEND_HISTORY
 
 # virtualenv and virtualenvwrapper
 export VIRTUAL_ENV_DISABLE_PROMPT='1'
