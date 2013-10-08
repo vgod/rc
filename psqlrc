@@ -56,9 +56,10 @@
 \set ll '\\! ls -lrt;'
 
 
--- convenient alias
+-- convenient alias. access them with :xxx
 
 \set otd 'ORDER BY time DESC'
 \set ot 'ORDER BY time'
 \set l10 'LIMIT 10'
 \set l100 'LIMIT 100'
+\set s 'SELECT * FROM'
