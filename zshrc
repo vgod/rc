@@ -64,3 +64,16 @@ export WORKON_HOME=~/Envs
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+# psql
+export PSQL_EDITOR='vim +"set syntax=sql"'
+export YELLOW=`echo -e '\033[1;33m'`
+export LIGHT_CYAN=`echo -e '\033[1;36m'`
+export NOCOLOR=`echo -e '\033[0m'`
+
+export LESS="-iMSx4 -FXR"
+
+PAGER="sed \"s/\([[:space:]]\+-[0-9.]\+\)$/${LIGHT_CYAN}\1$NOCOLOR/;" 
+PAGER+="s/\([[:space:]]\+[0-9.\-]\+[[:space:]]\)/${LIGHT_CYAN}\1$NOCOLOR/g;" 
+PAGER+="s/|/$YELLOW|$NOCOLOR/g;s/^\([-+]\+\)/$YELLOW\1$NOCOLOR/\" 2>/dev/null  | less"
+export PAGER
