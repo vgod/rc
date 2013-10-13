@@ -79,5 +79,6 @@ PAGER+="s/|/$YELLOW|$NOCOLOR/g;s/^\([-+]\+\)/$YELLOW\1$NOCOLOR/\" 2>/dev/null  |
 export PAGER
 
 # FASD https://github.com/clvv/fasd
+export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
