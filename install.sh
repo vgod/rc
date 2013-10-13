@@ -16,3 +16,5 @@ else
    echo "Please change your shell to `which zsh`"
    chsh
 fi
+
+git submodule update --init
