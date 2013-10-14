@@ -82,3 +82,5 @@ export PAGER
 export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
+alias v='f -e vim' # quick opening files with vim
+
