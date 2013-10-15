@@ -64,3 +64,8 @@ export WORKON_HOME=~/Envs
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+_VBoxManage() {
+reply=(`VBoxManage 2>&1|awk '/VBoxManage [a-z]/ {print $2}'|uniq`)
+}
+compctl -K _VBoxManage VBoxManage
