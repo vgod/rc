@@ -1,7 +1,7 @@
 #!/bin/bash
 RC_HOME=`pwd`
 cd ..
-for TARGET in zshrc screenrc;
+for TARGET in zshrc screenrc psqlrc tmux.conf;
 do
    if [ -e ".$TARGET" ]; then
       mv ".$TARGET" ".$TARGET.old"
@@ -16,3 +16,5 @@ else
    echo "Please change your shell to `which zsh`"
    chsh
 fi
+
+git submodule update --init

@@ -69,3 +69,22 @@ _VBoxManage() {
 reply=(`VBoxManage 2>&1|awk '/VBoxManage [a-z]/ {print $2}'|uniq`)
 }
 compctl -K _VBoxManage VBoxManage
+
+# psql
+export PSQL_EDITOR='vim +"set syntax=sql"'
+export YELLOW=`echo -e '\033[1;33m'`
+export LIGHT_CYAN=`echo -e '\033[1;36m'`
+export NOCOLOR=`echo -e '\033[0m'`
+
+export LESS="-iMSx4 -FXR"
+
+PAGER="sed \"s/\([[:space:]]\+-[0-9.]\+\)$/${LIGHT_CYAN}\1$NOCOLOR/;" 
+PAGER+="s/\([[:space:]]\+[0-9.\-]\+[[:space:]]\)/${LIGHT_CYAN}\1$NOCOLOR/g;" 
+PAGER+="s/|/$YELLOW|$NOCOLOR/g;s/^\([-+]\+\)/$YELLOW\1$NOCOLOR/\" 2>/dev/null  | less"
+export PAGER
+
+# FASD https://github.com/clvv/fasd
+export PATH=$PATH:$HOME/.rc/fasd
+eval "$(fasd --init auto)"
+
+alias v='f -e vim' # quick opening files with vim
