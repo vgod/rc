@@ -3,11 +3,13 @@ RC_HOME=`pwd`
 cd ..
 for TARGET in zshrc screenrc psqlrc tmux.conf;
 do
-   if [ -e ".$TARGET" ]; then
+   if [ -e ".$TARGET" ] && [ ! -L ".$TARGET" ]; then
       mv ".$TARGET" ".$TARGET.old"
       echo
    fi
-   ln -s "$RC_HOME/$TARGET" ".$TARGET"
+   if [ ! -L ".$TARGET" ]; then
+      ln -s "$RC_HOME/$TARGET" ".$TARGET"
+   fi
 done
 if [[ "$SHELL" =~ .*/zsh ]]
 then
@@ -17,4 +19,5 @@ else
    chsh
 fi
 
+cd $RC_HOME
 git submodule update --init
