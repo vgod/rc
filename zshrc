@@ -88,3 +88,5 @@ export PATH=$PATH:$HOME/.rc/fasd
 eval "$(fasd --init auto)"
 
 alias v='f -e vim' # quick opening files with vim
+alias j='fasd_cd -d'
+alias jj='fasd_cd -d -i'
