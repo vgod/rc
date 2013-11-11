@@ -90,3 +90,8 @@ eval "$(fasd --init auto)"
 alias v='f -e vim' # quick opening files with vim
 alias j='fasd_cd -d'
 alias jj='fasd_cd -d -i'
+
+# tmuxifier
+export PATH=$PATH:~/.rc/tmuxifier/bin
+eval "$(tmuxifier init -)"
+
