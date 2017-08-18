@@ -1,7 +1,7 @@
 #!/bin/bash
 RC_HOME=`pwd`
 cd ..
-for TARGET in zshrc screenrc psqlrc tmux.conf;
+for TARGET in zshrc screenrc psqlrc tmux.conf agignore;
 do
    if [ -e ".$TARGET" ] && [ ! -L ".$TARGET" ]; then
       mv ".$TARGET" ".$TARGET.old"
